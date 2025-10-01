@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escuela Cultura y Fraternidad</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 2em;
+    position: relative;
+    color: #002366;
+    background: linear-gradient(to bottom, #002366, #ffffff); /* Fondo profesional */
+  }
+
+  /* Logo principal */
+  .logo-top {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  /* Segundo logo normal */
+  .logo-second {
+    width: 200px;
+    margin-bottom: 30px;
+    object-fit: contain;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+    animation: colorChange 6s infinite alternate;
+    z-index: 2;
+  }
+
+  p { font-size: 1.2rem; margin-bottom: 2em; }
+
+  @keyframes colorChange {
+    0% { color: #ffffff; }
+    25% { color: #ffdd00; }
+    50% { color: #ff4d6d; }
+    75% { color: #4deaff; }
+    100% { color: #90ee90; }
+  }
+
+  /* Botones principales 1-6 */
+  .grado-botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .grado-botones a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #002366;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  .grado-botones a:hover {
+    transform: scale(1.2) rotate(8deg);
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+    background-color: #ffdd00;
+    color: #002366;
+  }
+
+  /* Botones ovalados debajo */
+  .extra-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .extra-buttons a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #002366;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  .extra-buttons a:hover {
+    transform: scale(1.05);
+    background-color: #ffdd00;
+    color: #002366;
+  }
+
+  /* Elementos flotantes */
+  .floating {
+    position: absolute;
+    width: 80px;
+    border-radius: 50%;
+    padding: 10px;
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease, left 0.5s ease, top 0.5s ease;
+  }
+  .img1 { top: 5%; left: 10%; }
+  .img2 { top: 15%; right: 10%; }
+  .img3 { bottom: 20%; left: 5%; }
+  .img4 { bottom: 15%; right: 15%; }
+  .img5 { top: 50%; left: 2%; }
+  .img6 { bottom: 35%; right: 5%; }
+
+  footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    z-index: 2;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    p { font-size: 1rem; }
+    .grado-botones a { width: 100px; height: 100px; font-size: 0.9rem; }
+    .extra-buttons a { padding: 12px 40px; font-size: 0.9rem; }
+    .logo-top { width: 120px; height: 120px; }
+    .logo-second { width: 150px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Logo principal -->
+  <img class="logo-top" src="https://www.micole.net/imagenes/colegio/logo/200046497/cultura-y-fraternidad_512.png" alt="Logo Cultura y Fraternidad">
+
+  <!-- Segundo logo normal -->
+  <img class="logo-second" src="https://plataforma.mmymg.com/wp-content/uploads/MMYMG-1-1.png" alt="Logo MMYMG">
+
+  <h1>Escuela Cultura y Fraternidad</h1>
+  <p>Formando con valores, construyendo el futuro.</p>
+
+  <!-- Botones 1 a 6 -->
+  <div class="grado-botones">
+    <a href="https://plataforma.mmymg.com/academix/">1er Grado</a>
+    <a href="https://plataforma.mmymg.com/academix/">2do Grado</a>
+    <a href="https://plataforma.mmymg.com/academix/">3er Grado</a>
+    <a href="https://plataforma.mmymg.com/academix/">4to Grado</a>
+    <a href="https://plataforma.mmymg.com/academix/">5to Grado</a>
+    <a href="https://plataforma.mmymg.com/academix/">6to Grado</a>
+  </div>
+
+  <!-- Botones extra -->
+  <div class="extra-buttons">
+    <a href="https://mylibrary.pbclibrary.org/raton/mousercise.htm" target="_blank">Pruebas Digitales</a>
+    <a href="https://www.google.com" target="_blank">Google</a>
+  </div>
+
+  <!-- Elementos flotantes -->
+  <img src="https://cdn-icons-png.flaticon.com/512/3211/3211392.png" alt="Cohete" class="floating img1">
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Libro" class="floating img2">
+  <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Lápiz" class="floating img3">
+  <img src="https://cdn-icons-png.flaticon.com/512/1974/1974041.png" alt="Globo" class="floating img4">
+  <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png" alt="Computadora" class="floating img5">
+  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135723.png" alt="Niño" class="floating img6">
+
+  <footer>© 2025 Escuela Cultura y Fraternidad I.A.P.</footer>
+
+  <script>
+    // Movimiento aleatorio de imágenes flotantes si el mouse pasa cerca
+    const floatingImages = document.querySelectorAll(".floating");
+    document.addEventListener("mousemove", (e) => {
+      floatingImages.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        const distance = Math.sqrt(
+          Math.pow(e.clientX - (rect.left + rect.width / 2), 2) +
+          Math.pow(e.clientY - (rect.top + rect.height / 2), 2)
+        );
+        if (distance < 100) {
+          const randomX = Math.random() * (window.innerWidth - 100);
+          const randomY = Math.random() * (window.innerHeight - 100);
+          img.style.left = randomX + "px";
+          img.style.top = randomY + "px";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
