@@ -41,7 +41,6 @@
 
   h1 {
     font-size: 6vw;
-    max-font-size: 3rem;
     margin-bottom: 0.3em;
     font-weight: bold;
     animation: colorChange 6s infinite alternate;
@@ -49,7 +48,6 @@
 
   p {
     font-size: 4vw;
-    max-font-size: 1.2rem;
     margin-bottom: 2em;
   }
 
@@ -110,7 +108,6 @@
     border-radius: 30px;
     font-weight: bold;
     font-size: 3vw;
-    max-font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
   }
@@ -143,73 +140,56 @@
   footer {
     margin-top: 2em;
     font-size: 3vw;
-    max-font-size: 0.9rem;
-    z-index: 2;
   }
 
+  /* --- Ajustes para móvil --- */
   @media (max-width: 768px) {
     h1 { font-size: 8vw; }
     p { font-size: 5vw; }
     .grado-botones a { width: 22vw; height: 22vw; }
     .extra-buttons a { font-size: 4vw; padding: 4vw 10vw; }
   }
+
+  /* --- Ajustes para computadora --- */
+  @media (min-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    p { font-size: 1.2rem; }
+    .logo-top { max-width: 120px; }
+    .logo-second { max-width: 160px; }
+    .grado-botones a {
+      width: 100px;
+      height: 100px;
+      font-size: 1rem;
+    }
+    .extra-buttons a {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+    footer { font-size: 1rem; }
+  }
 </style>
 </head>
 <body>
-
   <img class="logo-top" src="https://www.micole.net/imagenes/colegio/logo/200046497/cultura-y-fraternidad_512.png" alt="Logo Cultura y Fraternidad">
-
   <img class="logo-second" src="images/MMYMG-1-1.png" alt="Logo MMYMG">
 
   <h1>Escuela Cultura y Fraternidad</h1>
   <p>Formando con valores, construyendo el futuro.</p>
 
   <div class="grado-botones">
-    <a href="https://plataforma.mmymg.com/academix/">1er Grado</a>
-    <a href="https://plataforma.mmymg.com/academix/">2do Grado</a>
-    <a href="https://plataforma.mmymg.com/academix/">3er Grado</a>
-    <a href="https://plataforma.mmymg.com/academix/">4to Grado</a>
-    <a href="https://plataforma.mmymg.com/academix/">5to Grado</a>
-    <a href="https://plataforma.mmymg.com/academix/">6to Grado</a>
+    <a href="#">1er Grado</a>
+    <a href="#">2do Grado</a>
+    <a href="#">3er Grado</a>
+    <a href="#">4to Grado</a>
+    <a href="#">5to Grado</a>
+    <a href="#">6to Grado</a>
   </div>
 
   <div class="extra-buttons">
-    <a href="https://mylibrary.pbclibrary.org/raton/mousercise.htm" target="_blank">Pruebas Digitales</a>
-    <a href="https://www.google.com" target="_blank">Google</a>
+    <a href="#">Pruebas Digitales</a>
+    <a href="#">Google</a>
   </div>
 
-  <img src="https://cdn-icons-png.flaticon.com/512/3211/3211392.png" alt="Cohete" class="floating img1">
-  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Libro" class="floating img2">
-  <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Lápiz" class="floating img3">
-  <img src="https://cdn-icons-png.flaticon.com/512/1974/1974041.png" alt="Globo" class="floating img4">
-  <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png" alt="Computadora" class="floating img5">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135723.png" alt="Niño" class="floating img6">
-
   <footer>© 2025 Escuela Cultura y Fraternidad I.A.P.</footer>
-
-  <script>
-    const floatingImages = document.querySelectorAll(".floating");
-    document.addEventListener("mousemove", (e) => {
-      floatingImages.forEach(img => {
-        const rect = img.getBoundingClientRect();
-        const distance = Math.sqrt(
-          Math.pow(e.clientX - (rect.left + rect.width / 2), 2) +
-          Math.pow(e.clientY - (rect.top + rect.height / 2), 2)
-        );
-        if (distance < 100) {
-          const randomX = Math.random() * (window.innerWidth - rect.width);
-          const randomY = Math.random() * (window.innerHeight - rect.height);
-          img.style.left = randomX + "px";
-          img.style.top = randomY + "px";
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
-
-
-
-
-
